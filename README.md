@@ -46,7 +46,7 @@
 
 ### 📥 Clonar el repositorio:
 ```bash
-git clone https://github.com/ARSWLABS/Lab5/blueprints-api.git
+git clone https://github.com/ARSWLABS/Lab5.git
 ```
 
 ### 📂 Navegar al directorio del proyecto:
@@ -63,7 +63,7 @@ mvn clean install
 ```bash
 mvn spring-boot:run
 ```
-
+ESTA CORRIENDO PUERTO 8080
 ---
 
 ## 📌 Uso
