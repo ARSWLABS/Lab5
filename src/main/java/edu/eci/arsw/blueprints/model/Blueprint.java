@@ -17,6 +17,8 @@ public class Blueprint {
     this.points = new ArrayList<>(Arrays.asList(points));
   }
 
+  public Blueprint() {}
+
   public Blueprint(String author, String name, List<Point> points) {
     this.author = author;
     this.name = name;
