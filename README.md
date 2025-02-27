@@ -1,5 +1,7 @@
 # 🏗️ Blueprints API
 
+**Autores:** Diego Hernando Chicuazuque Castiblanco y Juan Esteban Cancelado Sánchez
+
 ## 📌 Descripción
 
 **Blueprints API** es una aplicación **RESTful** diseñada para la gestión eficiente de planos (blueprints). Permite realizar operaciones **CRUD** (Crear, Leer, Actualizar, Eliminar) y está optimizada para entornos concurrentes.
@@ -14,6 +16,7 @@
 - [📌 Uso](#-uso)
 - [🔗 Endpoints](#-endpoints)
 - [⚡ Análisis de Concurrencia](#-análisis-de-concurrencia)
+- [🧪 Pruebas](#-pruebas)
 - [🤝 Contribuciones](#-contribuciones)
 - [📜 Licencia](#-licencia)
 
@@ -34,6 +37,7 @@
 🔹 **Spring Boot**
 🔹 **Maven**
 🔹 **JUnit** (para pruebas)
+🔹 **Mockito** (para pruebas unitarias)
 🔹 **Concurrent Collections** (para manejo de concurrencia)
 
 ---
@@ -119,6 +123,17 @@ El componente **BlueprintsRESTAPI** está diseñado para manejar múltiples peti
 ✅ **Métodos atómicos** para evitar condiciones de carrera
 
 Para más detalles, consulta el archivo [ANALISIS_CONCURRENCIA.txt](ANALISIS_CONCURRENCIA.txt).
+
+---
+
+## 🧪 Pruebas
+
+Las pruebas unitarias están implementadas utilizando **JUnit 5** y **Mockito**.
+
+Para ejecutar las pruebas, usa:
+```bash
+mvn test
+```
 
 ---
 
