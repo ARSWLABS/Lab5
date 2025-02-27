@@ -9,12 +9,13 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
+import java.util.concurrent.ConcurrentHashMap;
 import org.springframework.stereotype.Repository;
 
 @Repository
 public class InMemoryBlueprintPersistence implements BlueprintsPersistence {
 
-  private final Map<Tuple<String, String>, Blueprint> blueprints = new HashMap<>();
+  private final Map<Tuple<String, String>, Blueprint> blueprints = new ConcurrentHashMap<>();
 
   public InMemoryBlueprintPersistence() {
     // load stub data
@@ -63,7 +64,7 @@ public class InMemoryBlueprintPersistence implements BlueprintsPersistence {
   }
 
   @Override
-  public Blueprint getBlueprint(String author, String name)
+  public synchronized Blueprint getBlueprint(String author, String name)
     throws BlueprintNotFoundException {
     Blueprint bp = blueprints.get(new Tuple<>(author, name));
     if (bp == null) {
